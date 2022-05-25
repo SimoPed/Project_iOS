@@ -7,7 +7,7 @@
 
 import UIKit
 
-let dioacne = 10
+let viviIBobby = 10
 
 class ViewController: UIViewController {
 
