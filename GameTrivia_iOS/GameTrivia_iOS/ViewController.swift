@@ -20,10 +20,12 @@ class ViewController: UIViewController {
         startButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
     }
     
-    @IBAction func startGame() {
-        //do something
+    //nascondere il back nella navigation item
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "switch" {
+            let vc = segue.destination
+            vc.navigationItem.hidesBackButton = true
+        }
     }
-
-
 }
 

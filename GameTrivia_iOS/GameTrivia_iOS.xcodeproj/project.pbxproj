@@ -13,6 +13,7 @@
 		8D9CE035284602BD00BFAC8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D9CE033284602BD00BFAC8B /* Main.storyboard */; };
 		8D9CE037284602BE00BFAC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D9CE036284602BE00BFAC8B /* Assets.xcassets */; };
 		8D9CE03A284602BE00BFAC8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D9CE038284602BE00BFAC8B /* LaunchScreen.storyboard */; };
+		8D9CE0422846127800BFAC8B /* SelectCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9CE0412846127800BFAC8B /* SelectCategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8D9CE036284602BE00BFAC8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D9CE039284602BE00BFAC8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D9CE03B284602BE00BFAC8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D9CE0412846127800BFAC8B /* SelectCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				8D9CE02D284602BD00BFAC8B /* AppDelegate.swift */,
 				8D9CE02F284602BD00BFAC8B /* SceneDelegate.swift */,
 				8D9CE031284602BD00BFAC8B /* ViewController.swift */,
+				8D9CE0412846127800BFAC8B /* SelectCategoryView.swift */,
 				8D9CE033284602BD00BFAC8B /* Main.storyboard */,
 				8D9CE036284602BE00BFAC8B /* Assets.xcassets */,
 				8D9CE038284602BE00BFAC8B /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D9CE0422846127800BFAC8B /* SelectCategoryView.swift in Sources */,
 				8D9CE032284602BD00BFAC8B /* ViewController.swift in Sources */,
 				8D9CE02E284602BD00BFAC8B /* AppDelegate.swift in Sources */,
 				8D9CE030284602BD00BFAC8B /* SceneDelegate.swift in Sources */,

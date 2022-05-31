@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="up6-HV-Kji">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -11,13 +11,13 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GameTrivia_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="GameTrivia_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trivia Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7t-LV-h32">
-                                <rect key="frame" x="20" y="144" width="374" height="171"/>
+                                <rect key="frame" x="20" y="188" width="374" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="320" id="HXC-2y-mmq"/>
                                 </constraints>
@@ -37,8 +37,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="startGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="lDO-yO-naM"/>
-                                    <segue destination="HGl-kM-6Hm" kind="show" id="g39-Of-aYw"/>
+                                    <segue destination="HGl-kM-6Hm" kind="show" identifier="switch" id="mD3-Kz-S1W"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -53,20 +52,21 @@
                             <constraint firstItem="Q7t-LV-h32" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="t8K-9J-whb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="MKq-DR-DwL"/>
                     <connections>
                         <outlet property="startButton" destination="x4s-bo-H3T" id="9Kk-sv-hai"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="113.83928571428571"/>
+            <point key="canvasLocation" x="1042.0289855072465" y="113.83928571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Category View-->
         <scene sceneID="aEQ-Nr-M2T">
             <objects>
-                <viewController id="HGl-kM-6Hm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectCategory" id="HGl-kM-6Hm" customClass="SelectCategoryView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dyB-hn-LeP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="dOj-8k-CDr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -75,7 +75,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15e-Ml-Aym" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893" y="105"/>
+            <point key="canvasLocation" x="1926" y="114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yii-sO-WYB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="up6-HV-Kji" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CrG-Xn-XTV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gaO-wP-Q5A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kRy-k0-R94" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="113.83928571428571"/>
         </scene>
     </scenes>
     <resources>
