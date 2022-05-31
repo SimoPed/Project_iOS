@@ -7,6 +7,8 @@
 
 import UIKit
 
+let dioacne = 10
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
