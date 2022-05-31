@@ -7,13 +7,21 @@
 
 import UIKit
 
-let viviIBobby = 10
-
 class ViewController: UIViewController {
 
+    @IBOutlet weak var startButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        startButton.layer.cornerRadius = 10
+        startButton.layer.shadowOpacity = 0.5
+        startButton.layer.shadowRadius = 0.0
+        startButton.layer.masksToBounds = false
+        startButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+    }
+    
+    @IBAction func startGame() {
+        //do something
     }
 
 
