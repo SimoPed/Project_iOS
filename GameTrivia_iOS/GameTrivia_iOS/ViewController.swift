@@ -13,11 +13,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startButton.layer.cornerRadius = 10
-        startButton.layer.shadowOpacity = 0.5
-        startButton.layer.shadowRadius = 0.0
-        startButton.layer.masksToBounds = false
-        startButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        startButton.charButton()
     }
     
     //nascondere il back nella navigation item
@@ -27,5 +23,18 @@ class ViewController: UIViewController {
             vc.navigationItem.hidesBackButton = true
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
 }
 
+extension UIButton {
+    func charButton() {
+        self.layer.cornerRadius = 10
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowRadius = 0.0
+        self.layer.masksToBounds = false
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+    }
+}

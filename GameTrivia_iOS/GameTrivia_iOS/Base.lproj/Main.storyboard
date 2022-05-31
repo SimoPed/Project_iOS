@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trivia Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7t-LV-h32">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GuessIt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7t-LV-h32">
                                 <rect key="frame" x="20" y="188" width="374" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="320" id="HXC-2y-mmq"/>
@@ -68,10 +68,125 @@
                     <view key="view" contentMode="scaleToFill" id="dyB-hn-LeP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleziona la categoria" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhr-hv-12f">
+                                <rect key="frame" x="107" y="188" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Yfp-o4-VbV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7w-jH-E2N">
+                                <rect key="frame" x="35" y="259" width="150" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cjr-cr-wRt"/>
+                                    <constraint firstAttribute="width" constant="150" id="mh8-15-yCA"/>
+                                </constraints>
+                                <state key="normal" title="Music">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGA-F9-u2f">
+                                <rect key="frame" x="229" y="259" width="150" height="50"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CVB-nv-k8L"/>
+                                    <constraint firstAttribute="width" constant="150" id="CcZ-h6-RWE"/>
+                                </constraints>
+                                <state key="normal" title="Mythology">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8c-1c-eeJ">
+                                <rect key="frame" x="35" y="359" width="150" height="50"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="03A-h6-893"/>
+                                    <constraint firstAttribute="width" constant="150" id="YqK-2x-cio"/>
+                                </constraints>
+                                <state key="normal" title="Video Games">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2u-Au-im9">
+                                <rect key="frame" x="229" y="359" width="150" height="50"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="E3Z-bi-cf9"/>
+                                    <constraint firstAttribute="height" constant="50" id="jSz-nh-r49"/>
+                                </constraints>
+                                <state key="normal" title="Film">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9b-jQ-VAp">
+                                <rect key="frame" x="35" y="459" width="150" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="MD3-c5-t1F"/>
+                                    <constraint firstAttribute="height" constant="50" id="dtW-38-zoi"/>
+                                </constraints>
+                                <state key="normal" title="Sports">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHT-Fo-fgm">
+                                <rect key="frame" x="229" y="459" width="150" height="50"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2Qh-Z9-jkk"/>
+                                    <constraint firstAttribute="height" constant="50" id="vln-QK-VWd"/>
+                                </constraints>
+                                <state key="normal" title="Vehicles">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nE8-Oy-qsQ">
+                                <rect key="frame" x="35" y="559" width="344" height="50"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LgM-A0-qos"/>
+                                </constraints>
+                                <state key="normal" title="All Categories">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dOj-8k-CDr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99911826849999996" green="0.97459417579999996" blue="0.76464360949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="i2u-Au-im9" firstAttribute="top" secondItem="kGA-F9-u2f" secondAttribute="bottom" constant="50" id="2fq-8Y-7il"/>
+                            <constraint firstItem="nE8-Oy-qsQ" firstAttribute="top" secondItem="i9b-jQ-VAp" secondAttribute="bottom" constant="50" id="8Pp-kd-LFo"/>
+                            <constraint firstItem="c8c-1c-eeJ" firstAttribute="top" secondItem="I7w-jH-E2N" secondAttribute="bottom" constant="50" id="CcE-9f-0d2"/>
+                            <constraint firstItem="uhr-hv-12f" firstAttribute="top" secondItem="dOj-8k-CDr" secondAttribute="top" constant="100" id="IBz-f7-TpD"/>
+                            <constraint firstItem="kGA-F9-u2f" firstAttribute="top" secondItem="uhr-hv-12f" secondAttribute="bottom" constant="50" id="IPQ-2T-G4c"/>
+                            <constraint firstItem="sHT-Fo-fgm" firstAttribute="top" secondItem="i2u-Au-im9" secondAttribute="bottom" constant="50" id="KFo-WU-XCV"/>
+                            <constraint firstItem="dOj-8k-CDr" firstAttribute="trailing" secondItem="i2u-Au-im9" secondAttribute="trailing" constant="35" id="NRz-Ta-Sc5"/>
+                            <constraint firstItem="dOj-8k-CDr" firstAttribute="trailing" secondItem="sHT-Fo-fgm" secondAttribute="trailing" constant="35" id="NeY-12-cZt"/>
+                            <constraint firstItem="nE8-Oy-qsQ" firstAttribute="leading" secondItem="dOj-8k-CDr" secondAttribute="leading" constant="35" id="RgM-bY-XQt"/>
+                            <constraint firstItem="c8c-1c-eeJ" firstAttribute="leading" secondItem="dOj-8k-CDr" secondAttribute="leading" constant="35" id="TAw-zU-BDs"/>
+                            <constraint firstItem="i9b-jQ-VAp" firstAttribute="leading" secondItem="dOj-8k-CDr" secondAttribute="leading" constant="35" id="VMx-gR-hYK"/>
+                            <constraint firstItem="uhr-hv-12f" firstAttribute="centerX" secondItem="dyB-hn-LeP" secondAttribute="centerX" id="Vjt-OI-9Nn"/>
+                            <constraint firstItem="dOj-8k-CDr" firstAttribute="trailing" secondItem="kGA-F9-u2f" secondAttribute="trailing" constant="35" id="d04-fs-l5e"/>
+                            <constraint firstItem="dOj-8k-CDr" firstAttribute="trailing" secondItem="nE8-Oy-qsQ" secondAttribute="trailing" constant="35" id="izG-8Y-ci8"/>
+                            <constraint firstItem="I7w-jH-E2N" firstAttribute="leading" secondItem="dOj-8k-CDr" secondAttribute="leading" constant="35" id="mdG-n6-KEV"/>
+                            <constraint firstItem="i9b-jQ-VAp" firstAttribute="top" secondItem="c8c-1c-eeJ" secondAttribute="bottom" constant="50" id="ncG-dw-yim"/>
+                            <constraint firstItem="I7w-jH-E2N" firstAttribute="top" secondItem="uhr-hv-12f" secondAttribute="bottom" constant="50" id="tRx-fS-2Zt"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PoQ-YD-c02"/>
+                    <connections>
+                        <outlet property="allcategoriesButton" destination="nE8-Oy-qsQ" id="oYN-bl-KBz"/>
+                        <outlet property="filmButton" destination="i2u-Au-im9" id="d5r-Kh-L3K"/>
+                        <outlet property="musicButton" destination="I7w-jH-E2N" id="dfS-pk-tua"/>
+                        <outlet property="mythologyButton" destination="kGA-F9-u2f" id="h0j-RL-NAl"/>
+                        <outlet property="sportsButton" destination="i9b-jQ-VAp" id="aGK-Vl-3ri"/>
+                        <outlet property="vehiclesButton" destination="sHT-Fo-fgm" id="zzK-HI-LlB"/>
+                        <outlet property="videogamesButton" destination="c8c-1c-eeJ" id="eMC-Ey-myp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15e-Ml-Aym" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,8 +215,23 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
