@@ -181,7 +181,7 @@
                     <connections>
                         <outlet property="allcategoriesButton" destination="nE8-Oy-qsQ" id="oYN-bl-KBz"/>
                         <outlet property="filmButton" destination="i2u-Au-im9" id="d5r-Kh-L3K"/>
-                        <outlet property="musicButton" destination="I7w-jH-E2N" id="dfS-pk-tua"/>
+                        <outlet property="musicButton" destination="I7w-jH-E2N" id="vfc-pB-Lec"/>
                         <outlet property="mythologyButton" destination="kGA-F9-u2f" id="h0j-RL-NAl"/>
                         <outlet property="sportsButton" destination="i9b-jQ-VAp" id="aGK-Vl-3ri"/>
                         <outlet property="vehiclesButton" destination="sHT-Fo-fgm" id="zzK-HI-LlB"/>

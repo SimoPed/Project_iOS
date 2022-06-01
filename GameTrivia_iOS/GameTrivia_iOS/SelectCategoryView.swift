@@ -20,12 +20,12 @@ class SelectCategoryView: UIViewController {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
         musicButton.charButton()
-        mythologyButton.charButton()
-        videogamesButton.charButton()
-        filmButton.charButton()
-        sportsButton.charButton()
-        vehiclesButton.charButton()
-        allcategoriesButton.charButton()
+//        mythologyButton.charButton()
+//        videogamesButton.charButton()
+//        filmButton.charButton()
+//        sportsButton.charButton()
+//        vehiclesButton.charButton()
+//        allcategoriesButton.charButton()
     }
     
 }
