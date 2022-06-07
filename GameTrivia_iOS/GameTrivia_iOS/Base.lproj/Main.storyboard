@@ -17,16 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GuessIt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7t-LV-h32">
-                                <rect key="frame" x="20" y="188" width="374" height="127"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="320" id="HXC-2y-mmq"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="188" width="374" height="35"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4s-bo-H3T">
-                                <rect key="frame" x="107" y="515" width="200" height="50"/>
+                                <rect key="frame" x="107" y="423" width="200" height="50"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="MbC-tZ-PGq"/>
@@ -37,18 +34,17 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HGl-kM-6Hm" kind="show" identifier="switch" id="mD3-Kz-S1W"/>
+                                    <segue destination="HGl-kM-6Hm" kind="show" id="ljv-K3-2bB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.97220844382349436" blue="0.78807910602430398" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="x4s-bo-H3T" firstAttribute="top" secondItem="Q7t-LV-h32" secondAttribute="bottom" constant="200" id="8vu-ke-9MD"/>
                             <constraint firstItem="x4s-bo-H3T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ENE-v1-7iQ"/>
+                            <constraint firstItem="x4s-bo-H3T" firstAttribute="top" secondItem="Q7t-LV-h32" secondAttribute="bottom" constant="200" id="Okt-1y-hD6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q7t-LV-h32" secondAttribute="trailing" constant="20" id="REa-aY-AsI"/>
                             <constraint firstItem="Q7t-LV-h32" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="bAB-LP-zXO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q7t-LV-h32" secondAttribute="bottom" constant="547" id="cte-i3-GcQ"/>
                             <constraint firstItem="Q7t-LV-h32" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="t8K-9J-whb"/>
                         </constraints>
                     </view>
@@ -64,7 +60,7 @@
         <!--Select Category View-->
         <scene sceneID="aEQ-Nr-M2T">
             <objects>
-                <viewController storyboardIdentifier="selectCategory" id="HGl-kM-6Hm" customClass="SelectCategoryView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectCategory" id="HGl-kM-6Hm" customClass="SelectCategoryView" customModule="GameTrivia_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dyB-hn-LeP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,6 +84,9 @@
                                 <state key="normal" title="Music">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="VNd-6F-7u3" kind="show" id="8eZ-pH-DHw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGA-F9-u2f">
                                 <rect key="frame" x="229" y="259" width="150" height="50"/>
@@ -179,18 +178,34 @@
                     </view>
                     <navigationItem key="navigationItem" id="PoQ-YD-c02"/>
                     <connections>
-                        <outlet property="allcategoriesButton" destination="nE8-Oy-qsQ" id="oYN-bl-KBz"/>
-                        <outlet property="filmButton" destination="i2u-Au-im9" id="d5r-Kh-L3K"/>
-                        <outlet property="musicButton" destination="I7w-jH-E2N" id="vfc-pB-Lec"/>
-                        <outlet property="mythologyButton" destination="kGA-F9-u2f" id="h0j-RL-NAl"/>
-                        <outlet property="sportsButton" destination="i9b-jQ-VAp" id="aGK-Vl-3ri"/>
-                        <outlet property="vehiclesButton" destination="sHT-Fo-fgm" id="zzK-HI-LlB"/>
-                        <outlet property="videogamesButton" destination="c8c-1c-eeJ" id="eMC-Ey-myp"/>
+                        <outlet property="allcategoriesButton" destination="nE8-Oy-qsQ" id="89x-5A-ZZZ"/>
+                        <outlet property="filmButton" destination="i2u-Au-im9" id="cxB-Yw-2kO"/>
+                        <outlet property="musicButton" destination="I7w-jH-E2N" id="gKx-oj-mVY"/>
+                        <outlet property="mythologyButton" destination="kGA-F9-u2f" id="0pB-I5-SQ5"/>
+                        <outlet property="sportsButton" destination="i9b-jQ-VAp" id="WpE-9P-BGG"/>
+                        <outlet property="vehiclesButton" destination="sHT-Fo-fgm" id="3Oi-qq-FlB"/>
+                        <outlet property="videogamesButton" destination="c8c-1c-eeJ" id="8EX-Ff-78o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15e-Ml-Aym" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1926" y="114"/>
+        </scene>
+        <!--Questions View Controller-->
+        <scene sceneID="ahp-oB-dsL">
+            <objects>
+                <viewController id="VNd-6F-7u3" customClass="QuestionsViewController" customModule="GameTrivia_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zWD-ny-KWA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="y2g-vT-A3h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DM3-Uw-ZoF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NA5-gy-tIt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2901" y="114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yii-sO-WYB">
@@ -214,6 +229,9 @@
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -8,6 +8,7 @@
 import UIKit
 
 class SelectCategoryView: UIViewController {
+ 
     @IBOutlet weak var musicButton: UIButton!
     @IBOutlet weak var mythologyButton: UIButton!
     @IBOutlet weak var videogamesButton: UIButton!
@@ -16,16 +17,18 @@ class SelectCategoryView: UIViewController {
     @IBOutlet weak var vehiclesButton: UIButton!
     @IBOutlet weak var allcategoriesButton: UIButton!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
         musicButton.charButton()
-//        mythologyButton.charButton()
-//        videogamesButton.charButton()
-//        filmButton.charButton()
-//        sportsButton.charButton()
-//        vehiclesButton.charButton()
-//        allcategoriesButton.charButton()
+        mythologyButton.charButton()
+        videogamesButton.charButton()
+        filmButton.charButton()
+        sportsButton.charButton()
+        vehiclesButton.charButton()
+        allcategoriesButton.charButton()
     }
     
 }
