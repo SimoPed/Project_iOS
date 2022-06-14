@@ -31,4 +31,6 @@ class SelectCategoryView: UIViewController {
         allcategoriesButton.charButton()
     }
     
+    
+
 }

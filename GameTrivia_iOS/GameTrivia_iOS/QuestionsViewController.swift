@@ -6,14 +6,32 @@
 //
 
 import UIKit
+import Foundation
+import Firebase
 
 class QuestionsViewController: UIViewController {
     
-    
+    let database = Firestore.firestore()
     
     override func viewDidLoad() {
         super .viewDidLoad()
+        musicQuestions()
     }
     
-    let url = URL(string: "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&encode=base64")
+    
+    func musicQuestions() {
+        let readDoc = database.collection("music").getDocuments() {(querySnapshot, err) in
+            if let err = err {
+                print("Error")
+            } else {
+//                for document in querySnapshot!.documents {
+//                print("\(querySnapshot?.documents[0].documentID) => \(querySnapshot?.documents[0].data())")
+//                }
+                var dati = querySnapshot?.documents[0].data()
+                print(dati)
+            }
+        }
+    
+    }
+    
 }
