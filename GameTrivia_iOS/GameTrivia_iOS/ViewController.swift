@@ -38,4 +38,13 @@ extension UIButton {
         self.layer.masksToBounds = false
         self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
     }
+    
+    func questionButton() {
+        self.layer.cornerRadius = 10
+        self.backgroundColor = UIColor.white
+        self.layer.masksToBounds = false
+        self.layer.shadowRadius = 0.0
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
+    }
 }
