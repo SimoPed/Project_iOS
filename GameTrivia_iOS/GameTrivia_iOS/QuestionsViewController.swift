@@ -7,16 +7,11 @@
 
 import UIKit
 import Foundation
+import Firebase
 
 class QuestionsViewController: UIViewController {
     
-    struct Music: Codable {
-        var question: String
-        var correct_answer: String
-        var incorrect_answers: [String]
-    }
-    
-    
+    let database = Firestore.firestore()
     
     override func viewDidLoad() {
         super .viewDidLoad()
@@ -24,37 +19,19 @@ class QuestionsViewController: UIViewController {
     }
     
     
-    func musicQuestions(completionHandler: @escaping ([Music]) -> Void) {
-        let url = URL(string: "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy")!
-//        let data = try! Data(contentsOf: url)
-//        do {
-//            let decoder: JSONDecoder = JSONDecoder.init()
-//            let user: Music = try decoder.decode(Music.self, from: data)
-//
-//            print("Dio bastardo \(user.question)")
-//        } catch _ {
-//            print("Dio madonna")
-//        }
-        
-        let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-              if let error = error {
-                print("Error with fetching films: \(error)")
-                return
-              }
-              
-              guard let httpResponse = response as? HTTPURLResponse,
-                    (200...299).contains(httpResponse.statusCode) else {
-                print("Error with the response, unexpected status code: \(response)")
-                return
-              }
-
-              if let data = data,
-                let musicSummary = try? JSONDecoder().decode(Music.self, from: data) {
-//                completionHandler(musicSummary.question ?? [])
-              }
-            })
-            task.resume()
-        
+    func musicQuestions() {
+        let readDoc = database.collection("music").getDocuments() {(querySnapshot, err) in
+            if let err = err {
+                print("Error")
+            } else {
+//                for document in querySnapshot!.documents {
+//                print("\(querySnapshot?.documents[0].documentID) => \(querySnapshot?.documents[0].data())")
+//                }
+                var dati = querySnapshot?.documents[0].data()
+                print(dati)
+            }
+        }
+    
     }
     
 }
