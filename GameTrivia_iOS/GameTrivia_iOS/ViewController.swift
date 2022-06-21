@@ -48,7 +48,7 @@ extension UIButton {
         self.layer.borderColor = UIColor.black.cgColor
     }
     
-    func shake(){
+    func shake() {
            let shake = CABasicAnimation(keyPath: "position")
            shake.duration = 0.1
            shake.repeatCount = 2

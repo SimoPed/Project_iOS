@@ -17,6 +17,7 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var thirdButtonAnswer: UIButton!
     @IBOutlet weak var fourthButtonAnswer: UIButton!
     
+    var i: Int = 0
 
     @IBAction func correctAnswerTapped(_ sender: UIButton) {
         firstButtonAnswer.backgroundColor = UIColor.green
@@ -24,6 +25,11 @@ class QuestionsViewController: UIViewController {
         secondButtonAnswer.isEnabled = false
         thirdButtonAnswer.isEnabled = false
         fourthButtonAnswer.isEnabled = false
+        i = i + 1
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.musicQuestions(number: self.i)
+        }
+
     }
     
     @IBAction func wrongOneAnswerTapped(_ sender: UIButton) {
@@ -34,6 +40,10 @@ class QuestionsViewController: UIViewController {
         secondButtonAnswer.isEnabled = false
         thirdButtonAnswer.isEnabled = false
         fourthButtonAnswer.isEnabled = false
+        i = i + 1
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.musicQuestions(number: self.i)
+        }
     }
     
     
@@ -45,6 +55,10 @@ class QuestionsViewController: UIViewController {
         secondButtonAnswer.isEnabled = false
         thirdButtonAnswer.isEnabled = false
         fourthButtonAnswer.isEnabled = false
+        i = i + 1
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.musicQuestions(number: self.i)
+        }
     }
     
     @IBAction func wrongThreeAnswerTapped(_ sender: UIButton) {
@@ -55,6 +69,10 @@ class QuestionsViewController: UIViewController {
         secondButtonAnswer.isEnabled = false
         thirdButtonAnswer.isEnabled = false
         fourthButtonAnswer.isEnabled = false
+        i = i + 1
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.musicQuestions(number: self.i)
+        }
     }
     
     let database = Firestore.firestore()
@@ -65,13 +83,22 @@ class QuestionsViewController: UIViewController {
         secondButtonAnswer.questionButton()
         thirdButtonAnswer.questionButton()
         fourthButtonAnswer.questionButton()
-        musicQuestions()
+        musicQuestions(number: i)
     }
     
     
-    func musicQuestions() {
+    func musicQuestions(number: Int) {
+    
+        firstButtonAnswer.isEnabled = true
+        secondButtonAnswer.isEnabled = true
+        thirdButtonAnswer.isEnabled = true
+        fourthButtonAnswer.isEnabled = true
+        firstButtonAnswer.backgroundColor = UIColor.white
+        secondButtonAnswer.backgroundColor = UIColor.white
+        thirdButtonAnswer.backgroundColor = UIColor.white
+        fourthButtonAnswer.backgroundColor = UIColor.white
         let readDoc = database.collection("music").getDocuments() {(querySnapshot, err) in
-            var dati = querySnapshot!.documents[0].data()
+            var dati = querySnapshot!.documents[number].data()
             self.questionLabel.text = dati["question"] as! String
             self.firstButtonAnswer.setTitle(dati["answerCorrect"] as! String, for: .normal)
             self.secondButtonAnswer.setTitle(dati["answerOne"] as! String, for: .normal)
@@ -81,6 +108,10 @@ class QuestionsViewController: UIViewController {
         }
     
     }
+    
+//    func delay(i: Int) {
+//        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(musicQuestions(number: i)), userInfo: nil, repeats: false)
+//    }
     
 }
 
