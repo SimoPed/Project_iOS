@@ -21,6 +21,7 @@ class QuestionsViewController: UIViewController {
     
     var i: Int = 0
     var timer : Timer?
+    var diocane : Int?
     
 
     @IBAction func correctAnswerTapped(_ sender: UIButton) {
