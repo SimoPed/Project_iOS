@@ -33,6 +33,7 @@ class QuestionsViewController: UIViewController {
         fourthButtonAnswer.isEnabled = false
         i = i + 1
         
+        progressiveBar.tintColor = .green
         progress()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
@@ -51,6 +52,7 @@ class QuestionsViewController: UIViewController {
         fourthButtonAnswer.isEnabled = false
         i = i + 1
         
+        progressiveBar.tintColor = .red
         progress()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
@@ -70,6 +72,7 @@ class QuestionsViewController: UIViewController {
         fourthButtonAnswer.isEnabled = false
         i = i + 1
         
+        progressiveBar.tintColor = .red
         progress()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
@@ -88,6 +91,7 @@ class QuestionsViewController: UIViewController {
         fourthButtonAnswer.isEnabled = false
         i = i + 1
         
+        progressiveBar.tintColor = .red
         progress()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
