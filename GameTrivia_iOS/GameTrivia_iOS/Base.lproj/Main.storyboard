@@ -214,6 +214,9 @@
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="correctAnswerTapped:" destination="VNd-6F-7u3" eventType="touchUpInside" id="PHH-hn-ndL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="secondAnswer" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r44-n1-uvG">
                                 <rect key="frame" x="229" y="238" width="150" height="50"/>
@@ -224,6 +227,9 @@
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="wrongOneAnswerTapped:" destination="VNd-6F-7u3" eventType="touchUpInside" id="Vk7-A7-eiz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="thirdAnswer" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odf-GA-Tqv">
                                 <rect key="frame" x="35" y="338" width="150" height="50"/>
@@ -234,6 +240,9 @@
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="wrongTwoAnswerTapped:" destination="VNd-6F-7u3" eventType="touchUpInside" id="bPl-0R-M7i"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="fourthAnswer" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIS-qP-B81">
                                 <rect key="frame" x="229" y="338" width="150" height="50"/>
@@ -244,6 +253,9 @@
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="wrongThreeAnswerTapped:" destination="VNd-6F-7u3" eventType="touchUpInside" id="GAf-0T-VJo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y2g-vT-A3h"/>
@@ -264,7 +276,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="DM3-Uw-ZoF"/>
                     <connections>
-                        <outlet property="firstButtonAnswer" destination="dvc-cw-4OW" id="Ydx-Wp-XgR"/>
+                        <outlet property="firstButtonAnswer" destination="dvc-cw-4OW" id="HXM-el-2Pz"/>
                         <outlet property="fourthButtonAnswer" destination="vIS-qP-B81" id="vxN-Pb-u75"/>
                         <outlet property="questionLabel" destination="srt-KW-ZwR" id="erE-cy-PR1"/>
                         <outlet property="secondButtonAnswer" destination="r44-n1-uvG" id="zcl-iz-R91"/>
