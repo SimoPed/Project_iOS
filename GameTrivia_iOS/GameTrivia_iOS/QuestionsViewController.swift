@@ -20,25 +20,41 @@ class QuestionsViewController: UIViewController {
 
     @IBAction func correctAnswerTapped(_ sender: UIButton) {
         firstButtonAnswer.backgroundColor = UIColor.green
+        firstButtonAnswer.isEnabled = false
+        secondButtonAnswer.isEnabled = false
+        thirdButtonAnswer.isEnabled = false
+        fourthButtonAnswer.isEnabled = false
     }
     
     @IBAction func wrongOneAnswerTapped(_ sender: UIButton) {
         secondButtonAnswer.backgroundColor = UIColor.red
         firstButtonAnswer.backgroundColor = UIColor.green
-               sender.shake()
-           }
+        sender.shake()
+        firstButtonAnswer.isEnabled = false
+        secondButtonAnswer.isEnabled = false
+        thirdButtonAnswer.isEnabled = false
+        fourthButtonAnswer.isEnabled = false
+    }
     
     
     @IBAction func wrongTwoAnswerTapped(_ sender: UIButton) {
         thirdButtonAnswer.backgroundColor = UIColor.red
         firstButtonAnswer.backgroundColor = UIColor.green
         sender.shake()
+        firstButtonAnswer.isEnabled = false
+        secondButtonAnswer.isEnabled = false
+        thirdButtonAnswer.isEnabled = false
+        fourthButtonAnswer.isEnabled = false
     }
     
     @IBAction func wrongThreeAnswerTapped(_ sender: UIButton) {
         fourthButtonAnswer.backgroundColor = UIColor.red
         firstButtonAnswer.backgroundColor = UIColor.green
         sender.shake()
+        firstButtonAnswer.isEnabled = false
+        secondButtonAnswer.isEnabled = false
+        thirdButtonAnswer.isEnabled = false
+        fourthButtonAnswer.isEnabled = false
     }
     
     let database = Firestore.firestore()
