@@ -18,23 +18,27 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var fourthButtonAnswer: UIButton!
     
 
-    @IBAction func correctAnswerTapped(_ sender: Any) {
+    @IBAction func correctAnswerTapped(_ sender: UIButton) {
         firstButtonAnswer.backgroundColor = UIColor.green
     }
     
-    @IBAction func wrongOneAnswerTapped(_ sender: Any) {
+    @IBAction func wrongOneAnswerTapped(_ sender: UIButton) {
         secondButtonAnswer.backgroundColor = UIColor.red
         firstButtonAnswer.backgroundColor = UIColor.green
-    }
+               sender.shake()
+           }
     
-    @IBAction func wrongTwoAnswerTapped(_ sender: Any) {
+    
+    @IBAction func wrongTwoAnswerTapped(_ sender: UIButton) {
         thirdButtonAnswer.backgroundColor = UIColor.red
         firstButtonAnswer.backgroundColor = UIColor.green
+        sender.shake()
     }
     
-    @IBAction func wrongThreeAnswerTapped(_ sender: Any) {
+    @IBAction func wrongThreeAnswerTapped(_ sender: UIButton) {
         fourthButtonAnswer.backgroundColor = UIColor.red
         firstButtonAnswer.backgroundColor = UIColor.green
+        sender.shake()
     }
     
     let database = Firestore.firestore()
@@ -63,3 +67,4 @@ class QuestionsViewController: UIViewController {
     }
     
 }
+

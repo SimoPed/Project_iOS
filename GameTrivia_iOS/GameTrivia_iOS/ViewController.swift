@@ -47,4 +47,20 @@ extension UIButton {
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.black.cgColor
     }
+    
+    func shake(){
+           let shake = CABasicAnimation(keyPath: "position")
+           shake.duration = 0.1
+           shake.repeatCount = 2
+           shake.autoreverses = true
+
+           let daPunto = CGPoint(x: center.x - 5, y: center.y)
+           let daValore = NSValue(cgPoint: daPunto)
+           shake.fromValue = daValore
+
+           let toPunto = CGPoint(x: center.x + 5, y: center.y)
+           let toValore = NSValue(cgPoint: toPunto)
+           shake.toValue = toValore
+           layer.add(shake, forKey: nil)
+       }
 }
