@@ -16,23 +16,32 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var secondButtonAnswer: UIButton!
     @IBOutlet weak var thirdButtonAnswer: UIButton!
     @IBOutlet weak var fourthButtonAnswer: UIButton!
+    @IBOutlet weak var progressiveBar: UIProgressView!
+    
     
     var i: Int = 0
+    var timer : Timer?
+    
 
     @IBAction func correctAnswerTapped(_ sender: UIButton) {
+        
         firstButtonAnswer.backgroundColor = UIColor.green
+        
         firstButtonAnswer.isEnabled = false
         secondButtonAnswer.isEnabled = false
         thirdButtonAnswer.isEnabled = false
         fourthButtonAnswer.isEnabled = false
         i = i + 1
+        
+        progress()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             self.musicQuestions(number: self.i)
         }
-
     }
     
     @IBAction func wrongOneAnswerTapped(_ sender: UIButton) {
+        
         secondButtonAnswer.backgroundColor = UIColor.red
         firstButtonAnswer.backgroundColor = UIColor.green
         sender.shake()
@@ -41,6 +50,9 @@ class QuestionsViewController: UIViewController {
         thirdButtonAnswer.isEnabled = false
         fourthButtonAnswer.isEnabled = false
         i = i + 1
+        
+        progress()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             self.musicQuestions(number: self.i)
         }
@@ -48,6 +60,7 @@ class QuestionsViewController: UIViewController {
     
     
     @IBAction func wrongTwoAnswerTapped(_ sender: UIButton) {
+        
         thirdButtonAnswer.backgroundColor = UIColor.red
         firstButtonAnswer.backgroundColor = UIColor.green
         sender.shake()
@@ -56,12 +69,16 @@ class QuestionsViewController: UIViewController {
         thirdButtonAnswer.isEnabled = false
         fourthButtonAnswer.isEnabled = false
         i = i + 1
+        
+        progress()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             self.musicQuestions(number: self.i)
         }
     }
     
     @IBAction func wrongThreeAnswerTapped(_ sender: UIButton) {
+        
         fourthButtonAnswer.backgroundColor = UIColor.red
         firstButtonAnswer.backgroundColor = UIColor.green
         sender.shake()
@@ -70,6 +87,9 @@ class QuestionsViewController: UIViewController {
         thirdButtonAnswer.isEnabled = false
         fourthButtonAnswer.isEnabled = false
         i = i + 1
+        
+        progress()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             self.musicQuestions(number: self.i)
         }
@@ -86,9 +106,27 @@ class QuestionsViewController: UIViewController {
         musicQuestions(number: i)
     }
     
+
+    
+    func progress() {
+        progressiveBar.isHidden = false
+        var progress: Float = 0.0
+        progressiveBar.progress = progress
+        
+        self.timer?.invalidate()
+        self.timer = Timer.scheduledTimer(withTimeInterval: 0.015, repeats: true, block: {(timer) in
+            progress += 0.01
+            self.progressiveBar.progress = progress
+            if self.progressiveBar.progress  == 1.0{
+                self.progressiveBar.progress = 0.0
+            }
+        })
+    }
+    
     
     func musicQuestions(number: Int) {
-    
+        
+        progressiveBar.isHidden = true
         firstButtonAnswer.isEnabled = true
         secondButtonAnswer.isEnabled = true
         thirdButtonAnswer.isEnabled = true
