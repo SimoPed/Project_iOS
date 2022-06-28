@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="up6-HV-Kji">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="up6-HV-Kji">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -344,10 +345,23 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="67v-Mg-MQu">
                                 <rect key="frame" x="30" y="848" width="354" height="4"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRe-sX-2Lt">
+                                <rect key="frame" x="100" y="717" width="214" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Results">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="rXh-5W-83h" kind="show" id="V50-sW-EJd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y2g-vT-A3h"/>
                         <color key="backgroundColor" red="1" green="0.97647058823529409" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="67v-Mg-MQu" firstAttribute="top" secondItem="FRe-sX-2Lt" secondAttribute="bottom" constant="100" id="0VU-1p-lXp"/>
                             <constraint firstItem="y2g-vT-A3h" firstAttribute="trailing" secondItem="srt-KW-ZwR" secondAttribute="trailing" constant="32" id="2x6-LX-lZA"/>
                             <constraint firstItem="67v-Mg-MQu" firstAttribute="leading" secondItem="y2g-vT-A3h" secondAttribute="leading" constant="30" id="3zf-To-WsB"/>
                             <constraint firstItem="y2g-vT-A3h" firstAttribute="trailing" secondItem="r44-n1-uvG" secondAttribute="trailing" constant="35" id="7E4-BE-oe6"/>
@@ -356,8 +370,10 @@
                             <constraint firstItem="y2g-vT-A3h" firstAttribute="bottom" secondItem="67v-Mg-MQu" secondAttribute="bottom" constant="10" id="O4d-KI-2YX"/>
                             <constraint firstItem="odf-GA-Tqv" firstAttribute="leading" secondItem="y2g-vT-A3h" secondAttribute="leading" constant="35" id="QxO-9y-atK"/>
                             <constraint firstItem="srt-KW-ZwR" firstAttribute="leading" secondItem="y2g-vT-A3h" secondAttribute="leading" constant="35" id="TqK-Hz-kJh"/>
+                            <constraint firstItem="FRe-sX-2Lt" firstAttribute="leading" secondItem="y2g-vT-A3h" secondAttribute="leading" constant="100" id="VLT-VF-hQC"/>
                             <constraint firstItem="dvc-cw-4OW" firstAttribute="leading" secondItem="y2g-vT-A3h" secondAttribute="leading" constant="35" id="brM-nW-o2b"/>
                             <constraint firstItem="dvc-cw-4OW" firstAttribute="top" secondItem="srt-KW-ZwR" secondAttribute="bottom" constant="50" id="dJ9-1Q-7k4"/>
+                            <constraint firstItem="y2g-vT-A3h" firstAttribute="trailing" secondItem="FRe-sX-2Lt" secondAttribute="trailing" constant="100" id="gI9-LZ-zAu"/>
                             <constraint firstItem="y2g-vT-A3h" firstAttribute="trailing" secondItem="vIS-qP-B81" secondAttribute="trailing" constant="35" id="lm7-2w-fak"/>
                             <constraint firstItem="vIS-qP-B81" firstAttribute="top" secondItem="r44-n1-uvG" secondAttribute="bottom" constant="50" id="plO-HR-EKQ"/>
                             <constraint firstItem="srt-KW-ZwR" firstAttribute="top" secondItem="y2g-vT-A3h" secondAttribute="top" constant="100" id="tA3-aa-COV"/>
@@ -366,6 +382,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="DM3-Uw-ZoF"/>
                     <connections>
+                        <outlet property="ResultButton" destination="FRe-sX-2Lt" id="BlV-31-Kwv"/>
                         <outlet property="firstButtonAnswer" destination="dvc-cw-4OW" id="HXM-el-2Pz"/>
                         <outlet property="fourthButtonAnswer" destination="vIS-qP-B81" id="vxN-Pb-u75"/>
                         <outlet property="progressiveBar" destination="67v-Mg-MQu" id="hf3-if-Wg7"/>
@@ -386,20 +403,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PV6-iS-4Mw">
-                                <rect key="frame" x="174" y="433" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="ResultButtonBack" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PV6-iS-4Mw">
+                                <rect key="frame" x="99" y="639" width="217" height="89"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mbl-kc-MtT"/>
                         <color key="backgroundColor" red="0.99607843159999998" green="0.97647058959999999" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="PV6-iS-4Mw" firstAttribute="leading" secondItem="Mbl-kc-MtT" secondAttribute="leading" constant="100" id="CT2-WH-u0r"/>
+                            <constraint firstItem="Mbl-kc-MtT" firstAttribute="trailing" secondItem="PV6-iS-4Mw" secondAttribute="trailing" constant="100" id="OzH-02-Tml"/>
+                            <constraint firstItem="Mbl-kc-MtT" firstAttribute="bottom" secondItem="PV6-iS-4Mw" secondAttribute="bottom" constant="50" id="VUs-3T-Z4C"/>
+                            <constraint firstItem="PV6-iS-4Mw" firstAttribute="top" secondItem="Mbl-kc-MtT" secondAttribute="top" constant="400" id="zKn-h5-IAB"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="PKc-9T-N3l"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGj-yE-UkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3748" y="114"/>
+            <point key="canvasLocation" x="3747.826086956522" y="113.83928571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yii-sO-WYB">
@@ -440,7 +463,7 @@
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

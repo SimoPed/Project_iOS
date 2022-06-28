@@ -17,6 +17,7 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var thirdButtonAnswer: UIButton!
     @IBOutlet weak var fourthButtonAnswer: UIButton!
     @IBOutlet weak var progressiveBar: UIProgressView!
+    @IBOutlet weak var ResultButton: UIButton!
     
     
     var i: Int = 0
@@ -160,6 +161,9 @@ class QuestionsViewController: UIViewController {
     override func viewDidLoad() {
         super .viewDidLoad()
         generator = randomNumber()
+        ResultButton.charButton()
+        ResultButton.isHidden = true
+        ResultButton.isEnabled = false
         firstButtonAnswer.questionButton()
         secondButtonAnswer.questionButton()
         thirdButtonAnswer.questionButton()
@@ -231,10 +235,9 @@ class QuestionsViewController: UIViewController {
                            self.correctControl = 3
                        }
                    }
-               } else{
-                   let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                   let vc = storyboard.instantiateViewController(withIdentifier: "ResultID")
-                   self.present(vc, animated: true)
+               } else {
+                   ResultButton.isHidden = false
+                   ResultButton.isEnabled = true
                }
            }
            
