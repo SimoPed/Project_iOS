@@ -393,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NA5-gy-tIt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2854" y="114"/>
+            <point key="canvasLocation" x="2777" y="114"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="Gac-0g-9Em">
@@ -406,7 +406,6 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="ResultButtonBack" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PV6-iS-4Mw">
                                 <rect key="frame" x="99" y="639" width="217" height="89"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mbl-kc-MtT"/>

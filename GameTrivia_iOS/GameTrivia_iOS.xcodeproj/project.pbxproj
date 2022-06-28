@@ -30,6 +30,10 @@
 		90C23E9C286AF59E00523B16 /* AdaptiveLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C23E9B286AF59E00523B16 /* AdaptiveLayoutConstraint.swift */; };
 		90C23E9E286AF5C700523B16 /* StackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C23E9D286AF5C700523B16 /* StackViewExtension.swift */; };
 		90C23EA0286AF5DB00523B16 /* TextFieldsFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C23E9F286AF5DB00523B16 /* TextFieldsFont.swift */; };
+		90C23EAC286B169700523B16 /* Gecaj.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C23EAB286B169700523B16 /* Gecaj.png */; };
+		90C23EAE286B169E00523B16 /* Frighi.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C23EAD286B169E00523B16 /* Frighi.png */; };
+		90C23EB0286B16A400523B16 /* Giarra.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C23EAF286B16A400523B16 /* Giarra.png */; };
+		90C23EB2286B16A900523B16 /* Martinetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C23EB1286B16A900523B16 /* Martinetti.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		90C23E9B286AF59E00523B16 /* AdaptiveLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveLayoutConstraint.swift; sourceTree = "<group>"; };
 		90C23E9D286AF5C700523B16 /* StackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewExtension.swift; sourceTree = "<group>"; };
 		90C23E9F286AF5DB00523B16 /* TextFieldsFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsFont.swift; sourceTree = "<group>"; };
+		90C23EAB286B169700523B16 /* Gecaj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gecaj.png; path = ../../../../.Trash/Gecaj.png; sourceTree = "<group>"; };
+		90C23EAD286B169E00523B16 /* Frighi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Frighi.png; path = ../../../../.Trash/Frighi.png; sourceTree = "<group>"; };
+		90C23EAF286B16A400523B16 /* Giarra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Giarra.png; path = ../../../../.Trash/Giarra.png; sourceTree = "<group>"; };
+		90C23EB1286B16A900523B16 /* Martinetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Martinetti.png; path = ../../../../.Trash/Martinetti.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,7 @@
 		8D9CE021284602BD00BFAC8B = {
 			isa = PBXGroup;
 			children = (
+				90C23EAA286B168900523B16 /* Images */,
 				8D9CE02C284602BD00BFAC8B /* GameTrivia_iOS */,
 				8D9CE02B284602BD00BFAC8B /* Products */,
 			);
@@ -115,6 +124,17 @@
 				49AFD97B2846251E00D20F02 /* AppIcon */,
 			);
 			path = GameTrivia_iOS;
+			sourceTree = "<group>";
+		};
+		90C23EAA286B168900523B16 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				90C23EB1286B16A900523B16 /* Martinetti.png */,
+				90C23EAF286B16A400523B16 /* Giarra.png */,
+				90C23EAB286B169700523B16 /* Gecaj.png */,
+				90C23EAD286B169E00523B16 /* Frighi.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +210,10 @@
 			files = (
 				49AFD97D2846253200D20F02 /* Post di Instagram 1080x1080 px.png in Resources */,
 				8D9CE03A284602BE00BFAC8B /* LaunchScreen.storyboard in Resources */,
+				90C23EAE286B169E00523B16 /* Frighi.png in Resources */,
+				90C23EB2286B16A900523B16 /* Martinetti.png in Resources */,
+				90C23EB0286B16A400523B16 /* Giarra.png in Resources */,
+				90C23EAC286B169700523B16 /* Gecaj.png in Resources */,
 				8D02B7D628586CB000FA2A11 /* GoogleService-Info.plist in Resources */,
 				8D9CE037284602BE00BFAC8B /* Assets.xcassets in Resources */,
 				8D9CE035284602BD00BFAC8B /* Main.storyboard in Resources */,
