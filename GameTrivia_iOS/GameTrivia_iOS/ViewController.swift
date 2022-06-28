@@ -7,6 +7,7 @@
 import Foundation
 
 import UIKit
+import FirebaseStorage
 
 let minScalableValue: CGFloat = 8.0 // Min value that should undergo upper scaling for bigger iphones and iPads
 extension CGFloat {
@@ -51,7 +52,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startButton.charButton()
-        
+//        let img:UIImage = UIImage(named: "Martinetti.png") ?? UIImage()
+//        imageView.image = img
     }
     
     //nascondere il back nella navigation item
