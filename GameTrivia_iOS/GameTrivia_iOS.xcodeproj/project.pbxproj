@@ -27,6 +27,9 @@
 		8D9CE037284602BE00BFAC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D9CE036284602BE00BFAC8B /* Assets.xcassets */; };
 		8D9CE03A284602BE00BFAC8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D9CE038284602BE00BFAC8B /* LaunchScreen.storyboard */; };
 		8D9CE0422846127800BFAC8B /* SelectCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9CE0412846127800BFAC8B /* SelectCategoryView.swift */; };
+		90C23E9C286AF59E00523B16 /* AdaptiveLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C23E9B286AF59E00523B16 /* AdaptiveLayoutConstraint.swift */; };
+		90C23E9E286AF5C700523B16 /* StackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C23E9D286AF5C700523B16 /* StackViewExtension.swift */; };
+		90C23EA0286AF5DB00523B16 /* TextFieldsFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C23E9F286AF5DB00523B16 /* TextFieldsFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		8D9CE039284602BE00BFAC8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D9CE03B284602BE00BFAC8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D9CE0412846127800BFAC8B /* SelectCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryView.swift; sourceTree = "<group>"; };
+		90C23E9B286AF59E00523B16 /* AdaptiveLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveLayoutConstraint.swift; sourceTree = "<group>"; };
+		90C23E9D286AF5C700523B16 /* StackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewExtension.swift; sourceTree = "<group>"; };
+		90C23E9F286AF5DB00523B16 /* TextFieldsFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +98,6 @@
 		8D9CE02C284602BD00BFAC8B /* GameTrivia_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				49AFD97B2846251E00D20F02 /* AppIcon */,
 				8D9CE02D284602BD00BFAC8B /* AppDelegate.swift */,
 				8D9CE02F284602BD00BFAC8B /* SceneDelegate.swift */,
 				8D9CE031284602BD00BFAC8B /* ViewController.swift */,
@@ -104,6 +109,10 @@
 				8D02B7D528586CB000FA2A11 /* GoogleService-Info.plist */,
 				8D9CE038284602BE00BFAC8B /* LaunchScreen.storyboard */,
 				8D9CE03B284602BE00BFAC8B /* Info.plist */,
+				90C23E9B286AF59E00523B16 /* AdaptiveLayoutConstraint.swift */,
+				90C23E9D286AF5C700523B16 /* StackViewExtension.swift */,
+				90C23E9F286AF5DB00523B16 /* TextFieldsFont.swift */,
+				49AFD97B2846251E00D20F02 /* AppIcon */,
 			);
 			path = GameTrivia_iOS;
 			sourceTree = "<group>";
@@ -194,10 +203,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90C23E9C286AF59E00523B16 /* AdaptiveLayoutConstraint.swift in Sources */,
 				8D9CE0422846127800BFAC8B /* SelectCategoryView.swift in Sources */,
+				90C23EA0286AF5DB00523B16 /* TextFieldsFont.swift in Sources */,
 				8D80F887284F3D6D00E06F57 /* QuestionsViewController.swift in Sources */,
 				8D9CE032284602BD00BFAC8B /* ViewController.swift in Sources */,
 				8D9CE02E284602BD00BFAC8B /* AppDelegate.swift in Sources */,
+				90C23E9E286AF5C700523B16 /* StackViewExtension.swift in Sources */,
 				8D9CE030284602BD00BFAC8B /* SceneDelegate.swift in Sources */,
 				49AFD1CB286AF509008F0729 /* ResultsViewController.swift in Sources */,
 			);

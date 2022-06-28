@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="up6-HV-Kji">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="up6-HV-Kji">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -79,8 +78,16 @@
                                 <rect key="frame" x="35" y="259" width="150" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="cjr-cr-wRt"/>
-                                    <constraint firstAttribute="width" constant="150" id="mh8-15-yCA"/>
+                                    <constraint firstAttribute="height" constant="50" id="cjr-cr-wRt" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="150" id="mh8-15-yCA" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" title="Music">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,8 +100,16 @@
                                 <rect key="frame" x="229" y="259" width="150" height="50"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="CVB-nv-k8L"/>
-                                    <constraint firstAttribute="width" constant="150" id="CcZ-h6-RWE"/>
+                                    <constraint firstAttribute="height" constant="50" id="CVB-nv-k8L" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="150" id="CcZ-h6-RWE" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" title="Mythology">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -104,8 +119,16 @@
                                 <rect key="frame" x="35" y="359" width="150" height="50"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="03A-h6-893"/>
-                                    <constraint firstAttribute="width" constant="150" id="YqK-2x-cio"/>
+                                    <constraint firstAttribute="height" constant="50" id="03A-h6-893" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="150" id="YqK-2x-cio" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" title="Video Games">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,8 +138,16 @@
                                 <rect key="frame" x="229" y="359" width="150" height="50"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="E3Z-bi-cf9"/>
-                                    <constraint firstAttribute="height" constant="50" id="jSz-nh-r49"/>
+                                    <constraint firstAttribute="width" constant="150" id="E3Z-bi-cf9" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="jSz-nh-r49" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" title="Film">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -126,8 +157,16 @@
                                 <rect key="frame" x="35" y="459" width="150" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="MD3-c5-t1F"/>
-                                    <constraint firstAttribute="height" constant="50" id="dtW-38-zoi"/>
+                                    <constraint firstAttribute="width" constant="150" id="MD3-c5-t1F" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="dtW-38-zoi" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" title="Sports">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -137,8 +176,16 @@
                                 <rect key="frame" x="229" y="459" width="150" height="50"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="2Qh-Z9-jkk"/>
-                                    <constraint firstAttribute="height" constant="50" id="vln-QK-VWd"/>
+                                    <constraint firstAttribute="width" constant="150" id="2Qh-Z9-jkk" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="vln-QK-VWd" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" title="Vehicles">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -148,7 +195,11 @@
                                 <rect key="frame" x="35" y="559" width="344" height="50"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="LgM-A0-qos"/>
+                                    <constraint firstAttribute="height" constant="50" id="LgM-A0-qos" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" title="All Categories">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -206,11 +257,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="firstAnswer" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvc-cw-4OW">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="firstAnswer" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dvc-cw-4OW">
                                 <rect key="frame" x="35" y="238" width="150" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="72d-Ih-PKg"/>
-                                    <constraint firstAttribute="width" constant="150" id="g6V-7D-xE8"/>
+                                    <constraint firstAttribute="height" constant="50" id="72d-Ih-PKg" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="150" id="g6V-7D-xE8" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -219,11 +278,19 @@
                                     <action selector="correctAnswerTapped:" destination="VNd-6F-7u3" eventType="touchUpInside" id="PHH-hn-ndL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="secondAnswer" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r44-n1-uvG">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="secondAnswer" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="r44-n1-uvG">
                                 <rect key="frame" x="229" y="238" width="150" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="99u-k4-TvH"/>
-                                    <constraint firstAttribute="height" constant="50" id="yLN-gc-6av"/>
+                                    <constraint firstAttribute="width" constant="150" id="99u-k4-TvH" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="yLN-gc-6av" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -232,11 +299,19 @@
                                     <action selector="wrongOneAnswerTapped:" destination="VNd-6F-7u3" eventType="touchUpInside" id="Vk7-A7-eiz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="thirdAnswer" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odf-GA-Tqv">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="thirdAnswer" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="odf-GA-Tqv">
                                 <rect key="frame" x="35" y="338" width="150" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="j7r-ee-emH"/>
-                                    <constraint firstAttribute="height" constant="50" id="w3f-fs-ZOO"/>
+                                    <constraint firstAttribute="width" constant="150" id="j7r-ee-emH" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="w3f-fs-ZOO" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -245,11 +320,19 @@
                                     <action selector="wrongTwoAnswerTapped:" destination="VNd-6F-7u3" eventType="touchUpInside" id="bPl-0R-M7i"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="fourthAnswer" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIS-qP-B81">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="fourthAnswer" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vIS-qP-B81">
                                 <rect key="frame" x="229" y="338" width="150" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="RKf-KM-Hn2"/>
-                                    <constraint firstAttribute="width" constant="150" id="ZOc-8M-2DC"/>
+                                    <constraint firstAttribute="height" constant="50" id="RKf-KM-Hn2" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="150" id="ZOc-8M-2DC" customClass="AdaptiveLayoutConstraint" customModule="GameTrivia_iOS" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setAdaptiveLayout" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -357,7 +440,7 @@
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
