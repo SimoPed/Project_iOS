@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49AFD1CB286AF509008F0729 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFD1CA286AF509008F0729 /* ResultsViewController.swift */; };
 		49AFD97D2846253200D20F02 /* Post di Instagram 1080x1080 px.png in Resources */ = {isa = PBXBuildFile; fileRef = 49AFD97C2846253200D20F02 /* Post di Instagram 1080x1080 px.png */; };
 		8D02B7D628586CB000FA2A11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D02B7D528586CB000FA2A11 /* GoogleService-Info.plist */; };
 		8D02B7D928586D0F00FA2A11 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8D02B7D828586D0F00FA2A11 /* FirebaseFirestore */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49AFD1CA286AF509008F0729 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		49AFD97C2846253200D20F02 /* Post di Instagram 1080x1080 px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Post di Instagram 1080x1080 px.png"; sourceTree = "<group>"; };
 		8D02B7D528586CB000FA2A11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D80F886284F3D6D00E06F57 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				8D9CE031284602BD00BFAC8B /* ViewController.swift */,
 				8D9CE0412846127800BFAC8B /* SelectCategoryView.swift */,
 				8D80F886284F3D6D00E06F57 /* QuestionsViewController.swift */,
+				49AFD1CA286AF509008F0729 /* ResultsViewController.swift */,
 				8D9CE033284602BD00BFAC8B /* Main.storyboard */,
 				8D9CE036284602BE00BFAC8B /* Assets.xcassets */,
 				8D02B7D528586CB000FA2A11 /* GoogleService-Info.plist */,
@@ -196,6 +199,7 @@
 				8D9CE032284602BD00BFAC8B /* ViewController.swift in Sources */,
 				8D9CE02E284602BD00BFAC8B /* AppDelegate.swift in Sources */,
 				8D9CE030284602BD00BFAC8B /* SceneDelegate.swift in Sources */,
+				49AFD1CB286AF509008F0729 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -293,7 +293,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NA5-gy-tIt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2898.5507246376815" y="113.83928571428571"/>
+            <point key="canvasLocation" x="2854" y="114"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="Gac-0g-9Em">
+            <objects>
+                <viewController storyboardIdentifier="ResultID" id="rXh-5W-83h" customClass="ResultsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B6t-5u-K6T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PV6-iS-4Mw">
+                                <rect key="frame" x="174" y="433" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Mbl-kc-MtT"/>
+                        <color key="backgroundColor" red="0.99607843159999998" green="0.97647058959999999" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TGj-yE-UkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3748" y="114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yii-sO-WYB">

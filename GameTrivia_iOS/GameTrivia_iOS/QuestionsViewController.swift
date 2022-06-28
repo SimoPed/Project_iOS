@@ -231,6 +231,10 @@ class QuestionsViewController: UIViewController {
                            self.correctControl = 3
                        }
                    }
+               } else{
+                   let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                   let vc = storyboard.instantiateViewController(withIdentifier: "ResultID")
+                   self.present(vc, animated: true)
                }
            }
            
