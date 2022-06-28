@@ -20,13 +20,29 @@ class QuestionsViewController: UIViewController {
     
     
     var i: Int = 0
-    var timer : Timer?
+    var timer: Timer?
     var generator = [Int]()
-    
+    var correctControl: Int = 0
 
     @IBAction func correctAnswerTapped(_ sender: UIButton) {
         
-        firstButtonAnswer.backgroundColor = UIColor.green
+        if (correctControl == 0){
+            firstButtonAnswer.backgroundColor = UIColor.green
+            progressiveBar.tintColor = .green
+        } else {
+            firstButtonAnswer.backgroundColor = UIColor.red
+            progressiveBar.tintColor = .red
+            switch correctControl {
+                case 1:
+                    secondButtonAnswer.backgroundColor = UIColor.green
+                case 2:
+                    thirdButtonAnswer.backgroundColor = UIColor.green
+                default:
+                    fourthButtonAnswer.backgroundColor = UIColor.green
+                }
+            sender.shake()
+        }
+
         
         firstButtonAnswer.isEnabled = false
         secondButtonAnswer.isEnabled = false
@@ -34,69 +50,108 @@ class QuestionsViewController: UIViewController {
         fourthButtonAnswer.isEnabled = false
         i = i + 1
         
-        progressiveBar.tintColor = .green
+       
         progress()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            self.musicQuestions(number: self.i, generator: self.generator)
+            self.musicQuestions(number: self.i, generator: self.generator, correctControl: self.correctControl)
         }
     }
     
     @IBAction func wrongOneAnswerTapped(_ sender: UIButton) {
         
-        secondButtonAnswer.backgroundColor = UIColor.red
-        firstButtonAnswer.backgroundColor = UIColor.green
-        sender.shake()
+        if (correctControl == 1){
+            secondButtonAnswer.backgroundColor = UIColor.green
+            progressiveBar.tintColor = .green
+        } else {
+            secondButtonAnswer.backgroundColor = UIColor.red
+            progressiveBar.tintColor = .red
+            switch correctControl {
+                case 0:
+                    firstButtonAnswer.backgroundColor = UIColor.green
+                case 2:
+                    thirdButtonAnswer.backgroundColor = UIColor.green
+                default:
+                    fourthButtonAnswer.backgroundColor = UIColor.green
+                }
+            sender.shake()
+        }
+        
         firstButtonAnswer.isEnabled = false
         secondButtonAnswer.isEnabled = false
         thirdButtonAnswer.isEnabled = false
         fourthButtonAnswer.isEnabled = false
         i = i + 1
         
-        progressiveBar.tintColor = .red
         progress()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            self.musicQuestions(number: self.i, generator: self.generator)
+            self.musicQuestions(number: self.i, generator: self.generator, correctControl: self.correctControl)
         }
     }
     
     
     @IBAction func wrongTwoAnswerTapped(_ sender: UIButton) {
         
-        thirdButtonAnswer.backgroundColor = UIColor.red
-        firstButtonAnswer.backgroundColor = UIColor.green
-        sender.shake()
+        if (correctControl == 2){
+            thirdButtonAnswer.backgroundColor = UIColor.green
+            progressiveBar.tintColor = .green
+        } else {
+            thirdButtonAnswer.backgroundColor = UIColor.red
+            progressiveBar.tintColor = .red
+            switch correctControl {
+                case 0:
+                    firstButtonAnswer.backgroundColor = UIColor.green
+                case 1:
+                    secondButtonAnswer.backgroundColor = UIColor.green
+                default:
+                    fourthButtonAnswer.backgroundColor = UIColor.green
+                }
+            sender.shake()
+        }
+
         firstButtonAnswer.isEnabled = false
         secondButtonAnswer.isEnabled = false
         thirdButtonAnswer.isEnabled = false
         fourthButtonAnswer.isEnabled = false
         i = i + 1
         
-        progressiveBar.tintColor = .red
         progress()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            self.musicQuestions(number: self.i, generator: self.generator)
+            self.musicQuestions(number: self.i, generator: self.generator, correctControl: self.correctControl)
         }
     }
     
     @IBAction func wrongThreeAnswerTapped(_ sender: UIButton) {
         
-        fourthButtonAnswer.backgroundColor = UIColor.red
-        firstButtonAnswer.backgroundColor = UIColor.green
-        sender.shake()
+        if (correctControl == 3){
+            fourthButtonAnswer.backgroundColor = UIColor.green
+            progressiveBar.tintColor = .green
+        } else {
+            fourthButtonAnswer.backgroundColor = UIColor.red
+            progressiveBar.tintColor = .red
+            switch correctControl {
+                case 0:
+                    firstButtonAnswer.backgroundColor = UIColor.green
+                case 1:
+                    secondButtonAnswer.backgroundColor = UIColor.green
+                default:
+                    thirdButtonAnswer.backgroundColor = UIColor.green
+                }
+            sender.shake()
+        }
+
         firstButtonAnswer.isEnabled = false
         secondButtonAnswer.isEnabled = false
         thirdButtonAnswer.isEnabled = false
         fourthButtonAnswer.isEnabled = false
         i = i + 1
         
-        progressiveBar.tintColor = .red
         progress()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            self.musicQuestions(number: self.i, generator: self.generator)
+            self.musicQuestions(number: self.i, generator: self.generator, correctControl: self.correctControl)
         }
     }
     
@@ -109,7 +164,7 @@ class QuestionsViewController: UIViewController {
         secondButtonAnswer.questionButton()
         thirdButtonAnswer.questionButton()
         fourthButtonAnswer.questionButton()
-        musicQuestions(number: i, generator: self.generator)
+        musicQuestions(number: i, generator: self.generator, correctControl: self.correctControl)
     }
     
 
@@ -130,7 +185,7 @@ class QuestionsViewController: UIViewController {
     }
     
     
-    func musicQuestions(number: Int, generator: [Int]) {
+    func musicQuestions(number: Int, generator: [Int], correctControl: Int) {
         progressiveBar.isHidden = true
                if number < 10 {
                    firstButtonAnswer.isEnabled = true
@@ -144,10 +199,37 @@ class QuestionsViewController: UIViewController {
                    let readDoc = database.collection("music").getDocuments() {(querySnapshot, err) in
                        var dati = querySnapshot!.documents[generator[number]].data()
                        self.questionLabel.text = dati["question"] as! String
-                       self.firstButtonAnswer.setTitle(dati["answerCorrect"] as! String, for: .normal)
-                       self.secondButtonAnswer.setTitle(dati["answerOne"] as! String, for: .normal)
-                       self.thirdButtonAnswer.setTitle(dati["answerTwo"] as! String, for: .normal)
-                       self.fourthButtonAnswer.setTitle(dati["answerThree"] as! String, for: .normal)
+                       
+                       var randomCorrect = Int.random(in: 0..<4)
+                       switch randomCorrect {
+                       case 0:
+                           self.firstButtonAnswer.setTitle(dati["answerCorrect"] as! String, for: .normal)
+                           self.secondButtonAnswer.setTitle(dati["answerOne"] as! String, for: .normal)
+                           self.thirdButtonAnswer.setTitle(dati["answerTwo"] as! String, for: .normal)
+                           self.fourthButtonAnswer.setTitle(dati["answerThree"] as! String, for: .normal)
+                           self.correctControl = 0
+                           
+                       case 1:
+                           self.firstButtonAnswer.setTitle(dati["answerOne"] as! String, for: .normal)
+                           self.secondButtonAnswer.setTitle(dati["answerCorrect"] as! String, for: .normal)
+                           self.thirdButtonAnswer.setTitle(dati["answerThree"] as! String, for: .normal)
+                           self.fourthButtonAnswer.setTitle(dati["answerTwo"] as! String, for: .normal)
+                           self.correctControl = 1
+                           
+                       case 2:
+                           self.firstButtonAnswer.setTitle(dati["answerThree"] as! String, for: .normal)
+                           self.secondButtonAnswer.setTitle(dati["answerTwo"] as! String, for: .normal)
+                           self.thirdButtonAnswer.setTitle(dati["answerCorrect"] as! String, for: .normal)
+                           self.fourthButtonAnswer.setTitle(dati["answerOne"] as! String, for: .normal)
+                           self.correctControl = 2
+                           
+                       default:
+                           self.firstButtonAnswer.setTitle(dati["answerTwo"] as! String, for: .normal)
+                           self.secondButtonAnswer.setTitle(dati["answerThree"] as! String, for: .normal)
+                           self.thirdButtonAnswer.setTitle(dati["answerOne"] as! String, for: .normal)
+                           self.fourthButtonAnswer.setTitle(dati["answerCorrect"] as! String, for: .normal)
+                           self.correctControl = 3
+                       }
                    }
                }
            }
