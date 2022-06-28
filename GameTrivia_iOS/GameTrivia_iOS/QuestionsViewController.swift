@@ -21,7 +21,7 @@ class QuestionsViewController: UIViewController {
     
     var i: Int = 0
     var timer : Timer?
-    var diocane : Int?
+    var generator = [Int]()
     
 
     @IBAction func correctAnswerTapped(_ sender: UIButton) {
@@ -38,7 +38,7 @@ class QuestionsViewController: UIViewController {
         progress()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            self.musicQuestions(number: self.i)
+            self.musicQuestions(number: self.i, generator: self.generator)
         }
     }
     
@@ -57,7 +57,7 @@ class QuestionsViewController: UIViewController {
         progress()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            self.musicQuestions(number: self.i)
+            self.musicQuestions(number: self.i, generator: self.generator)
         }
     }
     
@@ -77,7 +77,7 @@ class QuestionsViewController: UIViewController {
         progress()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            self.musicQuestions(number: self.i)
+            self.musicQuestions(number: self.i, generator: self.generator)
         }
     }
     
@@ -96,7 +96,7 @@ class QuestionsViewController: UIViewController {
         progress()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            self.musicQuestions(number: self.i)
+            self.musicQuestions(number: self.i, generator: self.generator)
         }
     }
     
@@ -104,11 +104,12 @@ class QuestionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super .viewDidLoad()
+        generator = randomNumber()
         firstButtonAnswer.questionButton()
         secondButtonAnswer.questionButton()
         thirdButtonAnswer.questionButton()
         fourthButtonAnswer.questionButton()
-        musicQuestions(number: i)
+        musicQuestions(number: i, generator: self.generator)
     }
     
 
@@ -129,28 +130,44 @@ class QuestionsViewController: UIViewController {
     }
     
     
-    func musicQuestions(number: Int) {
-        
+    func musicQuestions(number: Int, generator: [Int]) {
         progressiveBar.isHidden = true
-        firstButtonAnswer.isEnabled = true
-        secondButtonAnswer.isEnabled = true
-        thirdButtonAnswer.isEnabled = true
-        fourthButtonAnswer.isEnabled = true
-        firstButtonAnswer.backgroundColor = UIColor.white
-        secondButtonAnswer.backgroundColor = UIColor.white
-        thirdButtonAnswer.backgroundColor = UIColor.white
-        fourthButtonAnswer.backgroundColor = UIColor.white
-        let readDoc = database.collection("music").getDocuments() {(querySnapshot, err) in
-            var dati = querySnapshot!.documents[number].data()
-            self.questionLabel.text = dati["question"] as! String
-            self.firstButtonAnswer.setTitle(dati["answerCorrect"] as! String, for: .normal)
-            self.secondButtonAnswer.setTitle(dati["answerOne"] as! String, for: .normal)
-            self.thirdButtonAnswer.setTitle(dati["answerTwo"] as! String, for: .normal)
-            self.fourthButtonAnswer.setTitle(dati["answerThree"] as! String, for: .normal)
-            
-        }
+               if number < 10 {
+                   firstButtonAnswer.isEnabled = true
+                   secondButtonAnswer.isEnabled = true
+                   thirdButtonAnswer.isEnabled = true
+                   fourthButtonAnswer.isEnabled = true
+                   firstButtonAnswer.backgroundColor = UIColor.white
+                   secondButtonAnswer.backgroundColor = UIColor.white
+                   thirdButtonAnswer.backgroundColor = UIColor.white
+                   fourthButtonAnswer.backgroundColor = UIColor.white
+                   let readDoc = database.collection("music").getDocuments() {(querySnapshot, err) in
+                       var dati = querySnapshot!.documents[generator[number]].data()
+                       self.questionLabel.text = dati["question"] as! String
+                       self.firstButtonAnswer.setTitle(dati["answerCorrect"] as! String, for: .normal)
+                       self.secondButtonAnswer.setTitle(dati["answerOne"] as! String, for: .normal)
+                       self.thirdButtonAnswer.setTitle(dati["answerTwo"] as! String, for: .normal)
+                       self.fourthButtonAnswer.setTitle(dati["answerThree"] as! String, for: .normal)
+                   }
+               }
+           }
+           
+           func randomNumber() -> [Int] {
+               var numberRandom = [Int]()
+               
+               let lower = UInt32(0)
+               let higher = UInt32(10)
+               
+               while numberRandom.count != 10 {
+                   let number = arc4random_uniform(higher - lower) + lower
+                   if !numberRandom.contains(Int(number)) {
+                       numberRandom.append(Int(number))
+                   }
+               }
+               return numberRandom
+           }
     
-    }
+    
     
 //    func delay(i: Int) {
 //        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(musicQuestions(number: i)), userInfo: nil, repeats: false)
